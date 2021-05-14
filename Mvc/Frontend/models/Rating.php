@@ -52,7 +52,7 @@ class Rating extends Model
   }
   public function All_Rating($id)
   {
-    $sql_select="select comment_product.*,users.avatar from comment_product inner join users on users.id=rating_product.user_id where product_id=$id";
+    $sql_select="select rating_product.*,users.avatar as user_avatar from rating_product inner join users on users.id=rating_product.user_id where product_id=$id";
     $obj_select=$this->connection->prepare($sql_select);
     $obj_select->execute();
     $ratings= $obj_select->fetchAll(PDO::FETCH_ASSOC);

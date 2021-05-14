@@ -253,8 +253,6 @@ $product->detailModal();
             let name=$("#name_rating").val();
             let url=$(this).attr('href');
             // console.log(content,number,name,url);
-            if(content && number  && name)
-            {
                 $.ajax({
                     url: url,
                     method: 'POST',
@@ -268,11 +266,6 @@ $product->detailModal();
                     location.reload(data);
                     alert(data);
                 });
-            }
-            else
-            {
-                alert("Vui lòng nhập đủ thông tin đánh giá")
-            }
         });
         filter_data();
         function filter_data() {

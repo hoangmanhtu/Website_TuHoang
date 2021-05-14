@@ -146,4 +146,11 @@ class Product extends Model{
     $products=$obj_select->fetchAll(PDO::FETCH_ASSOC);
     return $products;
   }
+  public function AllProductCart($id){
+    $select_one="SELECT order_details.*,orders.user_id FROM orders, order_details WHERE orders.id =order_details.order_id AND orders.user_id=$id";
+    $obj_select=$this->connection->prepare($select_one);
+    $obj_select->execute();
+    $products=$obj_select->fetchAll(PDO::FETCH_ASSOC);
+    return $products;
+    }
 }

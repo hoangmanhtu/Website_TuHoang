@@ -33,17 +33,17 @@
 
               <img id="img-main" src="Assets/Uploads/products/<?php echo $product['avatar']; ?>">
           </div>
+          <?php if(!empty($product_images)): ?>
           <div class="single-zoom-thumb">
             <ul class="s-tab-zoom owl-carousel single-product-active" >
-              <?php if(!empty($product_images)):
-                foreach ($product_images as $image):
-              ?>
+              <?php foreach ($product_images as $image):?>
               <li class="name_imgaes">
                   <img width="70%" height="70px;" src="Assets/Uploads/product_images/<?php echo $image['avatar']; ?>" id="<?php echo $image["id"]?>" onclick="changeImage('<?php echo $image["id"]?>')" />
               </li>
-             <?php endforeach; endif; ?>
+             <?php endforeach; ?>
             </ul>
           </div>
+          <?php endif; ?>
         </div>
       </div>
       <div class="col-lg-6 col-md-6">
@@ -172,15 +172,19 @@
                 <?php if(!empty($ratings)): ?>
                   <?php foreach ($ratings as $rating): ?>
                 <div class="reviews_comment_box">
-<!--                  <div class="comment_thmb">-->
-<!--                    <img src="assets/img/blog/comment2.jpg" alt="">-->
-<!--                  </div>-->
+                  <div class="comment_thmb">
+                    <?php if(!empty($rating['user_avatar'])): ?>
+                    <img style="width: 50px;height: 50px;" src="assets/uploads/users/<?php echo $rating['user_avatar']; ?>" alt="">
+                    <?php else: ?>
+                      <img style="width: 50px;height: 50px;border: 1px solid #dadada" src="assets/frontend/images/user.jpg" alt="">
+                    <?php endif; ?>
+                  </div>
                   <div class="comment_text">
                     <div class="reviews_meta">
                       <div class="star_rating">
                         <ul>
                           <?php for($i=1;$i<=5;$i++): ?>
-                          <li><i class="ion-ios-star icon-star <?php if( $i <= $rating["number"]) echo "font-red"; else  echo "" ?>"></i></a></li>
+                          <li><i style="font-size: 18px;" class="ion-ios-star icon-star <?php if( $i <= $rating["number"]) echo "font-red"; else  echo "" ?>"></i></a></li>
                           <?php endfor; ?>
                         </ul>
                     </div>
@@ -192,7 +196,6 @@
                 <?php endforeach; else: ?>
                   <div style="text-align: center;">Sản phẩm này chưa có đánh giá !</div>
                 <?php endif; ?>
-                <?php if(isset($_SESSION["user_account"])): ?>
                 <div class="product_ratting mb-10">
                   <h3>Đánh giá của bạn : </h3>
                   <ul>
@@ -215,7 +218,6 @@
                     </div>
                     <a  class="submit_rating btn btn-success" href="danh-gia/<?php echo $product["id"]; ?>">Gửi đánh giá</a>
                 </div>
-                <?php endif; ?>
               </div>
             </div>
           </div>
