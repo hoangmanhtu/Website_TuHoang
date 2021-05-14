@@ -51,3 +51,5 @@ RewriteRule thong-tin-ca-nhan index.php?area=frontend&controller=Login&action=Up
 RewriteRule  lien-he index.php?area=frontend&controller=Contact&action=index
 #rewwrite url he-thong-cua-hang
 RewriteRule  he-thong-cua-hang index.php?area=frontend&controller=Contact&action=storeSystem
+#rewrite url tin tức
+RewriteRule bolgs-full index.php?area=frontend&controller=News&action=newsCategory

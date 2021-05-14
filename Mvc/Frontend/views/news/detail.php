@@ -21,9 +21,9 @@
         <div class="single_blog mb-50">
           <div class="blog_title">
                             <span>
-                                <a href="#"><?php echo $news['category_name']; ?></a>
+                                <a style="color: red"><?php echo $news['category_name']; ?></a>
                             </span>
-            <h2><a href="#"><?php echo $news['name']; ?></a></h2>
+            <h2><a ><?php echo $news['name']; ?></a></h2>
             <div class="blog_post">
               <ul>
                 <li class="post_date"><i
