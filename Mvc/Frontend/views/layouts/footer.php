@@ -118,14 +118,8 @@
         <div class="col-lg-3 col-md-12">
           <div class="col-lg-12 col-md-6">
             <div class="widgets_container widget_menu">
-              <h3>Liên hệ</h3>
-              <div class="footer_menu">
-                <ul>
-                  <li><a href="tel:0395679339">Gọi tư vấn : 039.567.9339</a></li>
-                  <li><a href="tel:0846842286">KH Doanh nghiệp & Đối tác : 084.684.2286 (Mr.Tú)</a></li>
-                  <li><a href="#">KH mua trả góp xin liên hệ : 096.567.9339 (Mr.Tuấn)</a></li>
-                </ul>
-              </div>
+              <h3>Địa chỉ Showroom :</h3>
+              <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.1955508333576!2d105.79664331424456!3d20.984796994655127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135acc6bdc7f95f%3A0x58ffc66343a45247!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2jhu4cgR2lhbyB0aMO0bmcgVuG6rW4gdOG6o2k!5e0!3m2!1svi!2s!4v1620994614541!5m2!1svi!2s" width="100%" height="200" style="border-radius:5px;;border: 0" allowfullscreen="" loading="lazy"></iframe>
 
             </div>
         </div>

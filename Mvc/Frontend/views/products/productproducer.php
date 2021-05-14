@@ -360,7 +360,7 @@
                     </div>
                     <div class="action_links">
                       <ul>
-                        <li class="wishlist"><a href="wishlist.html" title="Yêu thích"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
+                        <li class="wishlist"><a href="" onclick="HeartProduct(<?php echo $product_id; ?>)"  title="Yêu thích"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
                         <li class="add_to_cart"><a href="cart.html" title="Thêm vào giỏ hàng"><i class="zmdi zmdi-shopping-cart-plus"></i>Mua ngay</a></li>
                         <li class="compare"><a href="#" title="Xem chi tiết sản phẩm"><i class="zmdi zmdi-swap"></i></a></li>
                       </ul>
@@ -397,7 +397,7 @@
                     <?php endif; ?>
                     <div class="action_links">
                       <ul>
-                        <li class="wishlist"><a href="wishlist.html" title="Yêu thích"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
+                        <li class="wishlist"><a href="" onclick="HeartProduct(<?php echo $product_id; ?>)"  title="Yêu thích"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
                         <li class="add_to_cart"><a href="them-vao-gio-hang/<?php echo $product['id']; ?>" title="Thêm vào giỏ hàng"><i class="zmdi zmdi-shopping-cart-plus"></i>Mua ngay</a></li>
                         <li class="compare"><a href="#" title="Xem chi tiết sản phẩm"><i class="zmdi zmdi-swap"></i></a></li>
                       </ul>

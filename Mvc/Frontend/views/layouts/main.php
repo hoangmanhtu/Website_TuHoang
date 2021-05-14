@@ -57,27 +57,20 @@ $product->detailModal();
         // tác động vào thuộc tính src của thẻ html co id=img-main
         document.getElementById("img-main").setAttribute("src", srcImg);
     }
-    // $( document ).ready(function() {
-    //     function loadTable(name) {
-    //         $.ajax({
-    //             url: "index.php?area=frontend&controller=product&action=productSale",
-    //             type: "POST",
-    //             data: {
-    //                 name: name,
-    //             },
-    //             success: function (data) {
-    //                 console.log(data);
-    //             }
-    //         });
-    //     }
+    function HeartProduct(id) {
 
-        // var nameActive = $('.deals_tab_list ul li a').attr('href');
-        // loadTable(nameActive);
-        // $('.deals_tab_list ul li a').on('click', function (e) {
-        //     e.preventDefault();
-        //     var href = $(this).attr('href');
-        //     loadTable(href);
-        // });
+        $.ajax({
+            url: "index.php?area=frontend&controller=WishList&action=addWishList",
+            method: 'POST',
+            data: {
+                id: id,
+            },
+            dataType: "text",
+        }).done(function (data) {
+            location.reload(data);
+            alert(data);
+        });
+    };
         $("#register_form").validate({
             rules:  {
                 fullname : "required",

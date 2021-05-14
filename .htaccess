@@ -41,3 +41,13 @@ RewriteRule danh-gia/([0-9]{1,}) index.php?controller=rating&action=index&id=$1
 RewriteRule huy-don-hang/([0-9]{1,}) index.php?controller=Login&action=delete_orders&id=$1
 #rewrite url danh sách sản phẩm
 RewriteRule san-pham-moi index.php?area=frontend&controller=Product&action=ProductNewsCenter
+#rewwrite url danh-sach-yeu-thich
+RewriteRule danh-sach-yeu-thich index.php?area=frontend&controller=WishList&action=index
+#rewwrite url xóa-san-pham-yeu-thich
+RewriteRule xoa-yeu-thich/([0-9]{1,}) index.php?area=frontend&controller=WishList&action=deteleWishList&id=$1
+#rewwrite url thong-tin-ca-nhan
+RewriteRule thong-tin-ca-nhan index.php?area=frontend&controller=Login&action=UpdateUser
+#rewwrite url lien-he
+RewriteRule  lien-he index.php?area=frontend&controller=Contact&action=index
+#rewwrite url he-thong-cua-hang
+RewriteRule  he-thong-cua-hang index.php?area=frontend&controller=Contact&action=storeSystem

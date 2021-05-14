@@ -29,8 +29,8 @@
                             <li class="active"><a  href="index.php"><i class="zmdi zmdi-home"></i> Trang chủ</a>
                             <li><a href="san-pham-moi"><i class="zmdi zmdi-tablet-android"></i> Hàng mới về</a></li>
                             <li><a href="blog.html"><i class="zmdi zmdi-collection-music"></i> Tin tức khuyến mại</a></li>
-                            <li><a href="#"><i class="zmdi zmdi-star"></i> Liên hệ</a></li>
-                            <li><a href="contact.html"><i class="zmdi zmdi-account-box-mail"></i> Hệ thống cửa hàng</a></li>
+                            <li><a href="lien-he"><i class="zmdi zmdi-star"></i> Liên hệ</a></li>
+                            <li><a href="he-thong-cua-hang"><i class="zmdi zmdi-account-box-mail"></i> Hệ thống cửa hàng</a></li>
                         </ul>
                     </nav>
                 </div>

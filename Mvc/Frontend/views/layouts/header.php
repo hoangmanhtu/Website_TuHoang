@@ -19,10 +19,19 @@
               <li class="language"><a href="dang-ky"> Đăng ký </a>
               </li>
               <?php else: ?>
-              <li class="top_links"><a ><i class="zmdi zmdi-account"></i> <?php echo $_SESSION['user_account']['fullname']; ?> <i class="zmdi zmdi-caret-down"></i></a>
+              <li class="top_links"><a>
+                  <span>
+                  <?php if(!empty($_SESSION['user_account']['avatar'])):  ?>
+                  <img style="width: 20px;height: 20px;border-radius: 20px;" src="Assets/uploads/users/<?php echo $_SESSION['user_account']['avatar']; ?>" alt="">
+                  <?php else: ?>
+                  <i class="zmdi zmdi-account"></i>
+                  <?php endif; ?>
+                  </span>
+                  <?php echo $_SESSION['user_account']['fullname']; ?> <i class="zmdi zmdi-caret-down"></i></a>
                 <ul class="dropdown_links">
-                  <li><a href="my-account.html">Thông tin cá nhân </a></li>
+                  <li><a href="thong-tin-ca-nhan">Thông tin cá nhân </a></li>
                   <li><a href="lich-su-mua-hang">Lịch sử đơn hàng</a></li>
+                  <li><a href="danh-sach-yeu-thich">Danh sách yêu thích</a></li>
                   <li><a href="logout">Đăng xuất</a></li>
                 </ul>
               </li>
@@ -315,7 +324,7 @@
                 <a href="#">Tin tức khuyến mại</a>
               </li>
               <li class="menu-item-has-children">
-                <a href="#">Liên hệ </a>
+                <a href="lien-he">Liên hệ </a>
 
               </li>
               <li class="menu-item-has-children">

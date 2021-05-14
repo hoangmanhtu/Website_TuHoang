@@ -62,11 +62,11 @@
                     <div class="action_links">
                       <ul>
                         <?php if($product["quality"] > 0): ?>
-                        <li class="wishlist"><a href="wishlist.html" title="Yêu thích"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
+                        <li class="wishlist"><a href="" onclick="HeartProduct(<?php echo $product_id; ?>)"  title="Yêu thích"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
                         <li class="add_to_cart"><a href="them-vao-gio-hang/<?php echo $product['id']; ?>" title="Thêm vào giỏ hàng"><i class="zmdi zmdi-shopping-cart-plus"></i>Mua ngay</a></li>
                         <li class="compare"><a href="<?php echo $product_link; ?>" title="Xem chi tiết sản phẩm"><i class="zmdi zmdi-swap"></i></a></li>
                         <?php else: ?>
-                          <li class="wishlist"><a href="wishlist.html" title="Yêu thích"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
+                          <li class="wishlist"><a href="" onclick="HeartProduct(<?php echo $product_id; ?>)"  title="Yêu thích"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
                           <li class="add_to_cart"><a href="tel:0395679339" title="Liên hệ với cửa hàng"><i class="zmdi zmdi-phone-bluetooth"></i>Liên hệ</a></li>
                           <li class="compare"><a href="<?php echo $product_link; ?>" title="Xem chi tiết sản phẩm"><i class="zmdi zmdi-swap"></i></a></li>
                         <?php endif; ?>

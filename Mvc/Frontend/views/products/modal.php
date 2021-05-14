@@ -99,10 +99,10 @@ $product_link = "chi-tiet-san-pham/$product_slug/$product_id";
                 <ul>
                   <?php if($product["quality"] <= 0): ?>
                     <li class="add_to_cart"><a href="tel:039.567.9339" " title="Liên hệ với cửa hàng"><i class="zmdi zmdi-shopping-cart-plus"></i>Liên hệ</a></li>
-                    <li class="wishlist"><a href="wishlist.html" title="Thêm vào danh sách yêu thích"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
+                    <li class="wishlist"><a href="" onclick="HeartProduct(<?php echo $product_id; ?>)"  title="Yêu thích"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
                   <?php else: ?>
                       <li class="add_to_cart"><a onclick="CartAddShopping(<?php echo $product['id']; ?>,<?php echo $product['quality']; ?>)" title="Thêm vào giỏ hàng"><i class="zmdi zmdi-shopping-cart-plus"></i> Mua ngay</a></li>
-                    <li class="wishlist"><a href="wishlist.html" title="Thêm vào danh sách yêu thích"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
+                    <li class="wishlist"><a href="" onclick="HeartProduct(<?php echo $product_id; ?>)"  title="Yêu thích"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
                   <?php endif; ?>
                 </ul>
                 </div>
