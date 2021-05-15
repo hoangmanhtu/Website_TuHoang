@@ -58,5 +58,12 @@ class Rating extends Model
     $ratings= $obj_select->fetchAll(PDO::FETCH_ASSOC);
     return $ratings;
   }
+  public function Ratingdelete($id)
+  {
+    $obj_delete = $this->connection->prepare("DELETE FROM rating_product WHERE id = $id");
+    $is_delete = $obj_delete->execute();
+    return $is_delete;
+  }
+
 }
 ?>

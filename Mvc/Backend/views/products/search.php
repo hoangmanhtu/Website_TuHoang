@@ -10,13 +10,22 @@
               <th style="text-align: center">Trạng thái</th>
               <th style="text-align: center">Ngày tạo</th>
               <th style="text-align: center;">Chức năng</th>
+              <th style="text-align: center;">Đánh giá</th>
             </tr >
             <?php if(!empty($products)): ?>
                 <?php foreach ($products as $product): ?>
                     <tr style="text-align: center">
                         <td><?php echo $product["id"]  ?></td>
                         <!--                -->
-                        <td><?php echo $product["title"] ?></td>
+                        <td><?php echo $product["title"] ?>
+                          <p>
+                            <?php  if(!empty($product["total_rating"])){
+                              echo '<p style="color: aqua">( '.$product["total_rating"].' đánh giá )</p>';
+                            }else{
+                              echo '<p style="color: aqua">( chưa có đánh giá )</p>';
+                            } ?>
+                          </p>
+                        </td>
                         <!--              -->
 
                       <td>
@@ -58,6 +67,9 @@
                             <i class="fa fa-trash"></i>
                           </a>
                         <?php endif; ?>
+                      </td>
+                      <td>
+                        <a href="index.php?area=backend&controller=product&action=RatingProduct&id=<?php echo $product['id'] ?>"><i class="fa fa-eye"></i> Đánh giá</a>
                       </td>
                     </tr>
                 <?php endforeach; ?>

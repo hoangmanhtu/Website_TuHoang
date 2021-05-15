@@ -3,6 +3,7 @@ require_once 'Mvc/Backend/models/Category.php';
 require_once 'Mvc/Backend/models/Product.php';
 require_once 'Mvc/Backend/models/Producer.php';
 require_once 'Mvc/Backend/models/product_images.php';
+require_once 'Mvc/Frontend/models/Rating.php';
 class ProductController extends Controller{
     public function index(){
         $pageSize=3;
@@ -361,4 +362,22 @@ class ProductController extends Controller{
         header('Location: index.php?area=backend&controller=product');
         exit();
     }
+    public function RatingProduct(){
+      if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
+        $_SESSION['error'] = 'ID không hợp lệ';
+        header('location: index.php?area=backend&controller=product');
+        exit();
+      }
+      $id = $_GET['id'];
+      $product_model = new Product();
+      $product = $product_model->getById($id);
+      $rating_model=new Rating();
+      $ratings=$rating_model->All_Rating($id);
+      $output=['ratings' => $ratings,
+      'product' => $product
+      ];
+      $this->content=$this->render('Mvc/Backend/views/products/RatingProduct.php',$output);
+      require_once 'Mvc/Backend/views/layouts/main.php';
+    }
+
 }

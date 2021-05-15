@@ -4,6 +4,9 @@
     font-style: italic;
     font-size: 12px;
 }
+.icon-star{
+    color: yellow;
+}
 ::-webkit-scrollbar {
     -webkit-appearance: none;
     width: 3px;
