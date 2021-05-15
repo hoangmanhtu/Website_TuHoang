@@ -5,7 +5,7 @@
         <div class="breadcrumb_content">
           <ul>
             <li><a href="index.html">Trang chủ</a></li>
-            <li><a href="#"><?php echo $news['category_name']; ?></a></li>
+            <li><a href="bolgs-full">Tin tức</a></li>
             <li><?php echo $news['name']; ?></li>
           </ul>
         </div>

@@ -69,7 +69,7 @@
               <td><?php echo $product['present']; ?></td>
             </tr>
             <tr>
-                <th>Mô tả ngắn sản phẩm</th>
+                <th>Thông số kỹ thuật</th>
                 <td><?php echo $product['summary']; ?></td>
             </tr>
             <tr>

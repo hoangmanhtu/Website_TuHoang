@@ -56,7 +56,7 @@ html, body {
 
 body {
   line-height: 24px;
-  font-size: 13px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   visibility: visible;
@@ -5209,8 +5209,8 @@ font-weight: bold;
   margin-left: 20px;
 }
 .small_product_items .product_name h3 {
-  font-size: 13px;
-  line-height: 15px;
+  font-size: 15px;
+  line-height: 20px;
   margin-bottom: 8px;
 }
 .small_product_items .price_box {
@@ -5328,7 +5328,7 @@ font-weight: bold;
   margin-top: 10px;
 }
 .single_product .product_name h3 {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 17px;
   padding-top: 25px;
   overflow: hidden;

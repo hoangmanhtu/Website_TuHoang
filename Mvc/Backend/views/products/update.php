@@ -43,7 +43,7 @@
             <textarea cols="30" rows="5" class="form-control " placeholder="Mô tả chi tiết sản phâm" name="present"><?php echo isset($product['present']) ? $product['present'] : '' ?></textarea>
           </div>
           <div class="form-group">
-            <label for="summary">Mô tả ngắn sản phẩm :</label>
+            <label for="summary">Thông số kỹ thuật :</label>
             <textarea cols="30" rows="5" class="form-control " placeholder="Mô tả chi tiết sản phâm" name="summary"><?php echo isset($product["summary"]) ? $product["summary"] : '' ?></textarea>
           </div>
           <div class="form-group">

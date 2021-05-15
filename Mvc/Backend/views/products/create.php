@@ -31,7 +31,7 @@
                     <textarea cols="30" rows="5" class="form-control " placeholder="Mô tả chi tiết sản phâm" name="present"><?php echo isset($_POST['present']) ? $_POST['present'] : '' ?></textarea>
                   </div>
                     <div class="form-group">
-                        <label for="summary">Mô tả ngắn sản phẩm :</label>
+                        <label for="summary">Thông số kỹ thuật :</label>
                         <textarea cols="30" rows="5" class="form-control " placeholder="Mô tả chi tiết sản phâm" name="summary"><?php echo isset($_POST['summary']) ? $_POST['summary'] : '' ?></textarea>
                     </div>
                     <div class="form-group">

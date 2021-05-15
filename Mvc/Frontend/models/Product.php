@@ -45,7 +45,7 @@ class Product extends Model{
     public function hotProduct(){
         $sql_select="select products.*,categories.name from categories inner join products 
                     on categories.id=products.category_id where products.status=1 and products.hotproduct=1 
-                    ORDER BY products.updated_at limit 5 ";
+                    ORDER BY products.updated_at desc limit 8 ";
         $obj_select=$this->connection->prepare($sql_select);
         $obj_select->execute();
         $products=$obj_select->fetchAll(PDO::FETCH_ASSOC);

@@ -15,7 +15,7 @@
               <div class="single_services">
                 <a href="<?php echo $new_link; ?>">
                 <div class="services_thumb">
-                  <img src="Assets/uploads/news/<?php echo $new["avatar"]; ?>" alt="">
+                  <img style="width: 100%;height: 250px;" src="Assets/uploads/news/<?php echo $new["avatar"]; ?>" alt="">
                 </div>
                 </a>
                 <div class="services_content">
