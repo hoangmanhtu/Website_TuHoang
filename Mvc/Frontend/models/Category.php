@@ -7,7 +7,7 @@ class Category extends Model{
         return $obj_select->fetchAll(PDO::FETCH_ASSOC);
     }
     public function hotCategory(){
-        $sql_select="select * from categories where status=1 and hotcategory=1";
+        $sql_select="select * from categories where status=1 and hotcategory=1 and category_status=1";
         $obj_select=$this->connection->prepare($sql_select);
         $obj_select->execute();
         return $obj_select->fetchAll(PDO::FETCH_ASSOC);

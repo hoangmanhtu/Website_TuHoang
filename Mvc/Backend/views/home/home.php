@@ -1,10 +1,10 @@
+<?php if($_SESSION['user_admin']['quyen']==1): ?>
 <div class="row">
   <div class="col-lg-3 col-xs-6">
     <!-- small box -->
     <div class="small-box bg-aqua">
       <div class="inner">
         <h3> <i class=""></i><?php echo $countOrder0; ?></h3><span></span>
-
         <p>Đơn hàng đang xử lý</p>
       </div>
       <div class="icon">
@@ -71,6 +71,7 @@
     </figure>
     </div>
   </div>
+
   <div class="col-sm-4">
    <?php require_once 'Mvc/backend/controllers/HomeController.php';
       $home_controller=new HomeController();
@@ -78,6 +79,14 @@
    ?>
   </div>
 </div>
+<?php else: ?>
+<div class="col-sm-12">
+    <?php require_once 'Mvc/backend/controllers/HomeController.php';
+    $home_controller=new HomeController();
+    $home_controller->hotproducts();
+    ?>
+</div>
+<?php endif; ?>
 <script>
     let listDay = $("#container2").attr('data_list_day');
     listDay = JSON.parse(listDay);

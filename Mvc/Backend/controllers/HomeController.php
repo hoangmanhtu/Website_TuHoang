@@ -90,7 +90,7 @@ require_once 'Mvc/backend/models/Product.php';
    }
    public function hotproductAll(){
      $home_model = new Home();
-     $products = $home_model->hotProduct();
+     $products = $home_model->hotProductAll();
      $this->content = $this->render('Mvc/Backend/views/products/productHot.php',['products' => $products]);
      require_once 'Mvc/Backend/views/layouts/main.php';
    }

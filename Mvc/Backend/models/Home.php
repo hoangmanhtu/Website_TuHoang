@@ -63,5 +63,16 @@ class Home extends Model{
     $products = $obj_select->fetchAll(PDO::FETCH_ASSOC);
     return $products;
   }
-
+  public function hotProductAll()
+  {
+    $sql_select = "select products.*,categories.name as category_name,producers.name as producer_name 
+                    from categories  inner join products inner join producers
+                    on categories.id=products.category_id and producers.id=products.producer_id
+                     where products.status=1 and products.hotproduct=1 
+                    ORDER BY products.updated_at desc";
+    $obj_select = $this->connection->prepare($sql_select);
+    $obj_select->execute();
+    $products = $obj_select->fetchAll(PDO::FETCH_ASSOC);
+    return $products;
+  }
 }

@@ -24,10 +24,7 @@
         <tr>
           <td><?php echo $product['id']; ?></td>
           <td><?php echo $product['title']; ?></td>
-          <td><span class="label label-success"><?php echo $product['quality']; ?> chiếc</span></td>
-          <td>
-            <div class="sparkbar" data-color="#00a65a" data-height="20"><canvas width="34" height="20" style="display: inline-block; width: 34px; height: 20px; vertical-align: top;"></canvas></div>
-          </td>
+          <td style="text-align: center"><span class="label label-success"><?php echo $product['quality']; ?> chiếc</span></td>
         </tr>
         <?php endforeach; ?>
         </tbody>
@@ -38,7 +35,7 @@
   <?php endif; ?>
   <!-- /.box-body -->
   <div class="box-footer clearfix" style="text-align: center">
-    <a href="index.php?area=backend&controller=home&action=hotproductAll" class="btn btn-sm btn-info btn-flat pull-center">Xem tất cả sản phẩm</a>
+    <a href="index.php?area=backend&controller=home&action=hotproductAll" class="btn btn-sm btn-info btn-flat pull-center">Xem tất cả sản phẩm nổi bật</a>
 
   </div>
   <!-- /.box-footer -->

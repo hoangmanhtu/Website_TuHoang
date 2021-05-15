@@ -1,11 +1,11 @@
 <section class="content-header" style="margin-bottom: 15px;">
   <h1>
-    Danh sách sản phẩm hot
+    Danh sách sản phẩm nổi bật
     <small>Tu Hoang Electronic</small>
   </h1>
   <ol class="breadcrumb">
     <li><a href="index.php?area=backend"><i class="fa fa-home"></i> Trang Chủ</a></li>
-    <li class="active"> <i class="fa fa-address-book"></i>  Danh sách sản phẩm hot</li>
+    <li class="active"> <i class="fa fa-address-book"></i>  Danh sách sản phẩm nổi bật</li>
   </ol>
 </section>
 <div id="order_table_text">
