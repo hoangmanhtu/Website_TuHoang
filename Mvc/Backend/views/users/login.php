@@ -8,16 +8,16 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
-  <link rel="stylesheet" href="Assets/backend/css/bootstrap.min.css">
+  <link rel="stylesheet" href="Assets/Backend/css/bootstrap.min.css">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="Assets/backend/css/font-awesome.min.css">
+  <link rel="stylesheet" href="Assets/Backend/css/font-awesome.min.css">
   <!-- Ionicons -->
-  <link rel="stylesheet" href="Assets/backend/css/ionicons.min.css">
+  <link rel="stylesheet" href="Assets/Backend/css/ionicons.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="Assets/backend/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="Assets/Backend/css/AdminLTE.min.css">
   <!-- iCheck -->
-  <link rel="stylesheet" href="Assets/backend/css/blue.css">
-  <link rel="stylesheet" href="Assets/backend/css/style.css">
+  <link rel="stylesheet" href="Assets/Backend/css/blue.css">
+  <link rel="stylesheet" href="Assets/Backend/css/style.css">
 
   <script src="Assets/Backend/js/jquery.min.js"></script>
   <script src="Assets/Backend/js/bootstrap.min.js"></script>

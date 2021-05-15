@@ -1,6 +1,6 @@
 <?php
-require_once 'Mvc/frontend/models/wishlist.php';
-require_once 'Mvc/frontend/models/product.php';
+require_once 'Mvc/Frontend/models/wishlist.php';
+require_once 'Mvc/Frontend/models/product.php';
 class  WishListController extends Controller{
   public function addWishList(){
     if(isset($_SESSION['user_account'])){
@@ -37,7 +37,7 @@ class  WishListController extends Controller{
     $user_id=$_SESSION['user_account']['id'];;
     $products=$wishList_model->getAllProductUser($user_id);
     $this->content=$this->render("Mvc/Frontend/views/wishlist/index.php",['products' => $products]);
-    require_once 'Mvc/frontend/views/layouts/main.php';
+    require_once 'Mvc/Frontend/views/layouts/main.php';
   }
   public function deteleWishList(){
     $id = $_GET['id'];

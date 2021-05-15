@@ -50,7 +50,7 @@ class ProductController extends Controller{
             $countProductSearch=$product_model->countTotalSearch($search);
             $numPage=ceil($countProductSearch/$pageSize);
             $products=$product_model->search($search,$pageSize,$page);
-            $this->content=$this->render("Mvc/backend/views/products/search.php", [
+            $this->content=$this->render("Mvc/Backend/views/products/search.php", [
                 "products" => $products,
                 "numPage" => $numPage,
                 "page" => $page]);
@@ -61,7 +61,7 @@ class ProductController extends Controller{
             $countProduct=$product_model->countTotal();
             $numPage=ceil($countProduct/$pageSize);
             $products=$product_model->getAll($pageSize,$page);
-            $this->content=$this->render("Mvc/backend/views/products/search.php", ["products" => $products,
+            $this->content=$this->render("Mvc/Backend/views/products/search.php", ["products" => $products,
                 "numPage" => $numPage,
                 "page" => $page]);
                 echo $this->content;

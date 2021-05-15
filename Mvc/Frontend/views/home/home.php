@@ -70,12 +70,12 @@
   </div>
 </section>
 <!--deals product section area end-->
-<?php  require_once 'Mvc/frontend/controllers/CategoryController.php';
+<?php  require_once 'Mvc/Frontend/controllers/CategoryController.php';
 $category=new CategoryController();
 $category->CategoryHot();
 ?>
 
-<?php  require_once 'Mvc/frontend/controllers/ProductController.php';
+<?php  require_once 'Mvc/Frontend/controllers/ProductController.php';
 $product=new ProductController();
 $product->hotProduct();
 ?>
@@ -107,11 +107,11 @@ $product->hotProduct();
 <section class="custom_product_area mb-50">
     <div class="container">
         <div class="row">
-            <?php  require_once 'Mvc/frontend/controllers/ProductController.php';
+            <?php  require_once 'Mvc/Frontend/controllers/ProductController.php';
             $product=new ProductController();
             $product->SellingProducts();
             ?>
-            <?php  require_once 'Mvc/frontend/controllers/ProductController.php';
+            <?php  require_once 'Mvc/Frontend/controllers/ProductController.php';
             $product=new ProductController();
             $product->starProducts();
             ?>
@@ -133,7 +133,7 @@ $product->hotProduct();
     </div>
   </div>
 </div>
-<?php  require_once 'Mvc/frontend/controllers/ProductController.php';
+<?php  require_once 'Mvc/Frontend/controllers/ProductController.php';
 $product=new ProductController();
 $product->NewsProduct();
 ?>
@@ -155,7 +155,7 @@ $product->NewsProduct();
 <!--banner area end-->
 
 <hr>
-<?php  require_once 'Mvc/frontend/controllers/NewsController.php';
+<?php  require_once 'Mvc/Frontend/controllers/NewsController.php';
 $product=new NewsController();
 $product->hotNews();
 ?>

@@ -80,7 +80,7 @@
 
       <!--      -->
       <div class="col-4">
-       <?php require_once 'Mvc/frontend/controllers/NewsController.php';
+       <?php require_once 'Mvc/Frontend/controllers/NewsController.php';
           $news_controller=new NewsController();
           $news_controller->NewsHot();
        ?>

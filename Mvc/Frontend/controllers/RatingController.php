@@ -1,6 +1,6 @@
 <?php
-require_once 'Mvc/frontend/models/rating.php';
-require_once 'Mvc/frontend/models/product.php';
+require_once 'Mvc/Frontend/models/rating.php';
+require_once 'Mvc/Frontend/models/product.php';
 class RatingController extends Controller
 {
   public function index()

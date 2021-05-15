@@ -1,6 +1,6 @@
 <?php
-require_once 'Mvc/backend/models/Home.php';
-require_once 'Mvc/backend/models/Product.php';
+require_once 'Mvc/Backend/models/Home.php';
+require_once 'Mvc/Backend/models/Product.php';
  class HomeController extends Controller{
      public function index(){
        $listDay=Date::getListDayInMoth();

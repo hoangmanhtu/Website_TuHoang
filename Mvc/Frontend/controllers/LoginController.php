@@ -1,5 +1,5 @@
 <?php
-require_once 'Mvc/frontend/models/Login.php';
+require_once 'Mvc/Frontend/models/Login.php';
 require_once  "Mvc/Frontend/Models/Order.php";
 require_once  "Mvc/Frontend/Models/OrderDetail.php";
 class LoginController extends Controller{
@@ -24,8 +24,8 @@ class LoginController extends Controller{
                 }
             }
         }
-        $this->content=$this->render("Mvc/frontend/views/login/index.php");
-        require_once "Mvc/frontend/views/layouts/main.php";
+        $this->content=$this->render("Mvc/Frontend/views/login/index.php");
+        require_once "Mvc/Frontend/views/layouts/main.php";
     }
     public function validateEmail()
     {
@@ -95,8 +95,8 @@ class LoginController extends Controller{
                 }
             }
         }
-        $this->content=$this->render("Mvc/frontend/views/login/register.php");
-        require_once 'Mvc/frontend/views/layouts/main.php';
+        $this->content=$this->render("Mvc/Frontend/views/login/register.php");
+        require_once 'Mvc/Frontend/views/layouts/main.php';
     }
     public function logout() {
         unset($_SESSION['user_account']);
@@ -110,8 +110,8 @@ class LoginController extends Controller{
     $id=$_SESSION["user_account"]["id"];
     $order_model=new Order();
     $orders=$order_model->listOrder($id);
-    $this->content=$this->render('Mvc/frontend/views/login/shoppingcart.php',["orders" => $orders]);
-    require_once 'Mvc/frontend/views/layouts/main.php';
+    $this->content=$this->render('Mvc/Frontend/views/login/shoppingcart.php',["orders" => $orders]);
+    require_once 'Mvc/Frontend/views/layouts/main.php';
   }
   public function historyallproduct()
   {
@@ -122,8 +122,8 @@ class LoginController extends Controller{
 //        print_r($products);
 //        echo "</pre>";
 //        die();
-    $this->content=$this->render('Mvc/frontend/views/login/HistoryAllProduct.php',["products" => $products]);
-    require_once 'Mvc/frontend/views/layouts/main.php';
+    $this->content=$this->render('Mvc/Frontend/views/login/HistoryAllProduct.php',["products" => $products]);
+    require_once 'Mvc/Frontend/views/layouts/main.php';
 
   }
   public function delete_orders()
@@ -180,8 +180,8 @@ class LoginController extends Controller{
         exit();
       }
     }
-    $this->content=$this->render('Mvc/frontend/views/login/UpdateUser.php');
-    require_once 'Mvc/frontend/views/layouts/main.php';
+    $this->content=$this->render('Mvc/Frontend/views/login/UpdateUser.php');
+    require_once 'Mvc/Frontend/views/layouts/main.php';
   }
 
 }

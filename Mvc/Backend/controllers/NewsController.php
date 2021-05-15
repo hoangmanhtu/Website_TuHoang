@@ -1,5 +1,5 @@
 <?php
-require_once 'Mvc/backend/models/News.php';
+require_once 'Mvc/Backend/models/News.php';
 class NewsController extends Controller{
     //    lấy ra tất cả danh mục
     public function index(){

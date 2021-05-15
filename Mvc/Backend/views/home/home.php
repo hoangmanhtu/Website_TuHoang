@@ -73,7 +73,7 @@
   </div>
 
   <div class="col-sm-4">
-   <?php require_once 'Mvc/backend/controllers/HomeController.php';
+   <?php require_once 'Mvc/Backend/controllers/HomeController.php';
       $home_controller=new HomeController();
       $home_controller->hotproducts();
    ?>
@@ -81,7 +81,7 @@
 </div>
 <?php else: ?>
 <div class="col-sm-12">
-    <?php require_once 'Mvc/backend/controllers/HomeController.php';
+    <?php require_once 'Mvc/Backend/controllers/HomeController.php';
     $home_controller=new HomeController();
     $home_controller->hotproducts();
     ?>

@@ -23,15 +23,15 @@
     <div class="row">
       <div class="banner-bottom">
         <div class="banner-bottom1">
-          <a href=""><img src="Assets/frontend/images/banner-bottom-1.webp" alt=""></a>
+          <a href=""><img src="Assets/Frontend/images/banner-bottom-1.webp" alt=""></a>
         </div>
         <div class="banner-bottom2">
-          <a href=""><img src="Assets/frontend/images/banner-bottom-2.webp" alt=""></a>
+          <a href=""><img src="Assets/Frontend/images/banner-bottom-2.webp" alt=""></a>
         </div>
       </div>
     </div>
   </div>
-    <?php require_once 'Mvc/frontend/controllers/NewsController.php';
+    <?php require_once 'Mvc/Frontend/controllers/NewsController.php';
     $news_controller=new NewsController();
     $news_controller->hotNews();
     ?>

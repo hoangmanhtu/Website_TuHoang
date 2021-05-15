@@ -225,7 +225,7 @@
     <!-- /.content-wrapper -->
 </div>
 <?php require_once 'Mvc/Backend/views/layouts/footer.php'; ?>
-<script src="assets/Backend/ckeditor/ckeditor.js"></script>
+<script src="Assets/Backend/ckeditor/ckeditor.js"></script>
 <script>
     function CartAddShopping(id) {
             $.ajax({

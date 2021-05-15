@@ -1,7 +1,7 @@
 <?php
-require_once 'Mvc/backend/models/Order.php';
-require_once 'Mvc/backend/models/OrderDetail.php';
-require_once 'Mvc/frontend/models/Product.php';
+require_once 'Mvc/Backend/models/Order.php';
+require_once 'Mvc/Backend/models/OrderDetail.php';
+require_once 'Mvc/Frontend/models/Product.php';
 require_once 'nganhang/PHPMailer/src/PHPMailer.php';
 require_once 'nganhang/PHPMailer/src/SMTP.php';
 require_once 'nganhang/PHPMailer/src/Exception.php';
@@ -86,12 +86,12 @@ class PaymentController extends Controller
           }
         }
       }
-    $this->content=$this->render("Mvc/backend/views/payments/index.php");
-    require_once 'Mvc/backend/views/layouts/main.php';
+    $this->content=$this->render("Mvc/Backend/views/payments/index.php");
+    require_once 'Mvc/Backend/views/layouts/main.php';
   }
   public function sendMail($email)
   {
-    $this->content=$this->render('Mvc/backend/views/payments/MailOrder.php');
+    $this->content=$this->render('Mvc/Backend/views/payments/MailOrder.php');
     $mail = new PHPMailer(true);
     try {
       $mail->CharSet="UTF-8";
@@ -126,8 +126,8 @@ class PaymentController extends Controller
   }
   public function thank()
   {
-    $this->content=$this->render("Mvc/backend/views/payments/thank.php");
-    require_once 'Mvc/backend/views/layouts/main.php';
+    $this->content=$this->render("Mvc/Backend/views/payments/thank.php");
+    require_once 'Mvc/Backend/views/layouts/main.php';
   }
 }
 

@@ -1,6 +1,6 @@
 <?php
-require_once 'Mvc/backend/models/staff.php';
-require_once 'Mvc/backend/models/user.php';
+require_once 'Mvc/Backend/models/staff.php';
+require_once 'Mvc/Backend/models/user.php';
 
 class StaffController extends Controller{
   public function index(){
@@ -23,8 +23,8 @@ class StaffController extends Controller{
         "numPage" => $numPage,
         "page" => $page
     ];
-    $this->content=$this->render("Mvc/backend/views/staffs/index.php",$output);
-    require_once 'Mvc/backend/views/layouts/main.php';
+    $this->content=$this->render("Mvc/Backend/views/staffs/index.php",$output);
+    require_once 'Mvc/Backend/views/layouts/main.php';
   }
 //
   public function search()
@@ -47,7 +47,7 @@ class StaffController extends Controller{
       $countStaffSearch=$staff_model->countTotalSearch($search);
       $numPage=ceil($countStaffSearch/$pageSize);
       $staffs=$staff_model->search($search,$pageSize,$page);
-      $this->content=$this->render("Mvc/backend/views/staffs/search.php",
+      $this->content=$this->render("Mvc/Backend/views/staffs/search.php",
           ["staffs" => $staffs,
           "numPage" => $numPage,
           "page" => $page]);
@@ -58,7 +58,7 @@ class StaffController extends Controller{
       $countStaff=$staff_model->countTotal();
       $numPage=ceil($countStaff/$pageSize);
       $staffs=$staff_model->getAll($pageSize,$page);
-      $this->content=$this->render("Mvc/backend/views/staffs/search.php",
+      $this->content=$this->render("Mvc/Backend/views/staffs/search.php",
           ["staffs" => $staffs,
           "numPage" => $numPage,
           "page" => $page]);
@@ -100,8 +100,8 @@ class StaffController extends Controller{
         exit();
       }
     }
-    $this->content=$this->render("Mvc/backend/views/staffs/create.php");
-    require_once 'Mvc/backend/views/layouts/main.php';
+    $this->content=$this->render("Mvc/Backend/views/staffs/create.php");
+    require_once 'Mvc/Backend/views/layouts/main.php';
   }
   public function detail(){
     if(!isset($_GET['id']) || !is_numeric($_GET["id"])) {

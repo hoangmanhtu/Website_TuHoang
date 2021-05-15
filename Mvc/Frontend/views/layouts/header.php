@@ -50,7 +50,7 @@
       <div class="row align-items-center">
         <div class="col-lg-3">
           <div class="logo">
-            <a href="index.php"><img src="Assets/frontend/images/logo.PNG" alt=""></a>
+            <a href="index.php"><img src="Assets/Frontend/images/logo.PNG" alt=""></a>
           </div>
         </div>
         <div class="col-lg-9">
@@ -63,7 +63,7 @@
                 </div>
                 <div class="result__search">
                   <?php
-                  require_once 'Mvc/frontend/controllers/ProductController.php';
+                  require_once 'Mvc/Frontend/controllers/ProductController.php';
                   $obj_controller=new ProductController();
                   $obj_controller->searchProductName();
                   ?>
@@ -149,7 +149,7 @@
       </div>
     </div>
   </div>
-<?php  require_once 'Mvc/frontend/controllers/CategoryController.php';
+<?php  require_once 'Mvc/Frontend/controllers/CategoryController.php';
       $category=new CategoryController();
       $category->getCategoryProduct();
 ?>

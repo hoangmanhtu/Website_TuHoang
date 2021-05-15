@@ -1,11 +1,11 @@
 <?php
-require_once 'Mvc/backend/models/report.php';
+require_once 'Mvc/Backend/models/report.php';
 class ReportController extends Controller{
   public function ProductNoData(){
     $report_model=new report();
     $products=$report_model->ProductNoData();
-    $this->content=$this->render("Mvc/backend/views/reports/ProductNoData.php",['products' => $products]);
-    require_once 'Mvc/backend/views/layouts/main.php';
+    $this->content=$this->render("Mvc/Backend/views/reports/ProductNoData.php",['products' => $products]);
+    require_once 'Mvc/Backend/views/layouts/main.php';
   }
   public function index()
   {
@@ -38,8 +38,8 @@ class ReportController extends Controller{
             'productsNoData' => $productsNoData,
             'ReportOrder' => $ReportOrder
         ];
-        $this->content = $this->render("Mvc/backend/views/reports/index.php", $output);
-        require_once 'Mvc/backend/views/layouts/main.php';
+        $this->content = $this->render("Mvc/Backend/views/reports/index.php", $output);
+        require_once 'Mvc/Backend/views/layouts/main.php';
       } else {
         $report_model = new report();
         $sumprice = $report_model->moneyProductStaff($id,$ngaybatdau, $ngayketthuc);
@@ -52,8 +52,8 @@ class ReportController extends Controller{
             'productsNoData' => $productsNoData,
             'ReportOrder' => $ReportOrder
         ];
-        $this->content = $this->render("Mvc/backend/views/reports/index.php", $output);
-        require_once 'Mvc/backend/views/layouts/main.php';
+        $this->content = $this->render("Mvc/Backend/views/reports/index.php", $output);
+        require_once 'Mvc/Backend/views/layouts/main.php';
       }
     } else {
       if (isset($_POST['submit'])) {
@@ -76,8 +76,8 @@ class ReportController extends Controller{
             'productsNoData' => $productsNoData,
             'ReportOrder' => $ReportOrder
         ];
-        $this->content = $this->render("Mvc/backend/views/reports/index.php", $output);
-        require_once 'Mvc/backend/views/layouts/main.php';
+        $this->content = $this->render("Mvc/Backend/views/reports/index.php", $output);
+        require_once 'Mvc/Backend/views/layouts/main.php';
       } else {
         $report_model = new report();
         $sumprice = $report_model->moneyProduct($ngaybatdau, $ngayketthuc);
@@ -90,8 +90,8 @@ class ReportController extends Controller{
             'productsNoData' => $productsNoData,
             'ReportOrder' => $ReportOrder
         ];
-        $this->content = $this->render("Mvc/backend/views/reports/index.php", $output);
-        require_once 'Mvc/backend/views/layouts/main.php';
+        $this->content = $this->render("Mvc/Backend/views/reports/index.php", $output);
+        require_once 'Mvc/Backend/views/layouts/main.php';
       }
     }
   }

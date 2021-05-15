@@ -24,7 +24,7 @@
       <div class="col-lg-3 col-md-12">
         <!--sidebar widget start-->
         <aside class="sidebar_widget">
-          <?php  require_once 'Mvc/frontend/controllers/CategoryController.php';
+          <?php  require_once 'Mvc/Frontend/controllers/CategoryController.php';
           $category_controller=new CategoryController();
           $category_controller->getCategoryCenter();
           ?>
@@ -37,7 +37,7 @@
 
             </form>
           </div>
-          <?php  require_once 'Mvc/frontend/controllers/ProducerController.php';
+          <?php  require_once 'Mvc/Frontend/controllers/ProducerController.php';
           $producer_controller=new ProducerController();
           $producer_controller->ProducerCenter();
           ?>

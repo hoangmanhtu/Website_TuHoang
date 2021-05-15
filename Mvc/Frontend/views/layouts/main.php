@@ -10,13 +10,13 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
-  <link rel="stylesheet" href="assets/Frontend/css/plugins.css">
-  <link rel="stylesheet" href="assets/Frontend/css/style.css">
+  <link rel="stylesheet" href="Assets/Frontend/css/plugins.css">
+  <link rel="stylesheet" href="Assets/Frontend/css/style.css">
   <script src="Assets/Backend/js/jquery.min.js"></script>
 </head>
 <body>
 <input type="hidden" value="<?php echo isset($_GET['id']) ? $_GET['id'] : ""  ?>" name="getid" class="get_id">
-<?php require_once 'Mvc/frontend/views/layouts/header.php' ;?>
+<?php require_once 'Mvc/Frontend/views/layouts/header.php' ;?>
 <!--header area end-->
 <?php  if(isset($_SESSION['success'])): ?>
   <div class="container">
@@ -36,15 +36,15 @@
 <?php endif;?>
 <?php echo $this->content; ?>
 <!--footer area start-->
-<?php require_once 'Mvc/frontend/views/layouts/footer.php'; ?>
+<?php require_once 'Mvc/Frontend/views/layouts/footer.php'; ?>
 <!--footer area end-->
-<?php  require_once 'Mvc/frontend/controllers/ProductController.php';
+<?php  require_once 'Mvc/Frontend/controllers/ProductController.php';
 $product=new ProductController();
 $product->detailModal();
 ?>
 <!-- Plugins JS -->
-<script src="assets/Frontend/js/plugins.js"></script>
-<script src="assets/Frontend/js/main.js"></script>
+<script src="Assets/Frontend/js/plugins.js"></script>
+<script src="Assets/Frontend/js/main.js"></script>
 <script src="Assets/Backend/js/jquery.validate.min.js"></script>
 <script src="Assets/Backend/js/additional-methods.min.js"></script>
 <!-- Main JS -->

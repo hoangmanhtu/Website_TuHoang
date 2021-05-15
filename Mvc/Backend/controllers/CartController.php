@@ -56,8 +56,8 @@ class CartController extends Controller
         }
       }
     }
-    $this->content = $this->render('Mvc/backend/views/carts/index.php');
-    require_once "Mvc/backend/views/layouts/main.php";
+    $this->content = $this->render('Mvc/Backend/views/carts/index.php');
+    require_once "Mvc/Backend/views/layouts/main.php";
   }
 
   public function delete()

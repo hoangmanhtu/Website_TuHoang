@@ -1,5 +1,5 @@
 <?php
-require_once 'Mvc/frontend/models/Product.php';
+require_once 'Mvc/Frontend/models/Product.php';
 class CartController extends Controller
 {
     public function __construct()
@@ -99,8 +99,8 @@ class CartController extends Controller
             }
         }
         $this->content=$this->render(
-            'Mvc/frontend/views/carts/index.php');
-        require_once "Mvc/frontend/views/layouts/main.php";
+            'Mvc/Frontend/views/carts/index.php');
+        require_once "Mvc/Frontend/views/layouts/main.php";
     }
     public function delete()
     {

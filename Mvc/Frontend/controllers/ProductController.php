@@ -30,7 +30,7 @@ class ProductController extends Controller{
                 "category" => $category
         ];
        $this->content=$this->render("Mvc/Frontend/views/products/productcategory.php",$output);
-       require_once 'Mvc/frontend/views/layouts/main.php';
+       require_once 'Mvc/Frontend/views/layouts/main.php';
     }
     public function SellingProducts(){
       $products_model=new Product();
@@ -39,7 +39,7 @@ class ProductController extends Controller{
 //      print_r($products);
 //      echo "</pre>";
 //      die();
-      $this->content=$this->render("Mvc/frontend/views/products/SellingProduct.php",["products" => $products]);
+      $this->content=$this->render("Mvc/Frontend/views/products/SellingProduct.php",["products" => $products]);
       echo $this->content;
     }
     public function starProducts(){
@@ -49,7 +49,7 @@ class ProductController extends Controller{
 //      print_r($products);
 //      echo "</pre>";
 //      die();
-      $this->content=$this->render("Mvc/frontend/views/products/starProducts.php",["products" => $products]);
+      $this->content=$this->render("Mvc/Frontend/views/products/starProducts.php",["products" => $products]);
       echo $this->content;
     }
 
@@ -75,7 +75,7 @@ class ProductController extends Controller{
             "producer" => $producer
         ];
         $this->content=$this->render("Mvc/Frontend/views/products/productproducer.php",$output);
-        require_once 'Mvc/frontend/views/layouts/main.php';
+        require_once 'Mvc/Frontend/views/layouts/main.php';
     }
     public function detail(){
         $id=$_GET["id"];
@@ -102,12 +102,12 @@ class ProductController extends Controller{
         $product_model=new Product();
         $products=$product_model->ProductNews_Center($query);
         $this->content=$this->render("Mvc/Frontend/views/products/productcategory.php",["products" => $products]);
-        require_once 'Mvc/frontend/views/layouts/main.php';
+        require_once 'Mvc/Frontend/views/layouts/main.php';
   }
   public function SellingproductCenter(){
       $products_model=new Product();
       $products=$products_model->starProducts();
-      $this->content=$this->render("Mvc/frontend/views/products/SellingproductCenter.php",["products" => $products]);
+      $this->content=$this->render("Mvc/Frontend/views/products/SellingproductCenter.php",["products" => $products]);
       echo $this->content;
   }
   public function searchProduct(){

@@ -1,6 +1,6 @@
 <?php
-require_once 'Mvc/backend/models/staff.php';
-require_once 'Mvc/backend/models/User.php';
+require_once 'Mvc/Backend/models/staff.php';
+require_once 'Mvc/Backend/models/User.php';
 
 class UserController extends Controller
 {
@@ -36,8 +36,8 @@ class UserController extends Controller
         exit();
       }
     }
-    $this->content = $this->render("Mvc/backend/views/users/register.php", ['staff' => $staff, 'user' => $users]);
-    require_once 'Mvc/backend/views/layouts/main.php';
+    $this->content = $this->render("Mvc/Backend/views/users/register.php", ['staff' => $staff, 'user' => $users]);
+    require_once 'Mvc/Backend/views/layouts/main.php';
   }
 
   public function validateEmail()
@@ -80,7 +80,7 @@ class UserController extends Controller
         }
       }
     }
-    $this->content = $this->render("Mvc/backend/views/users/login.php");
+    $this->content = $this->render("Mvc/Backend/views/users/login.php");
     echo $this->content;
   }
 
@@ -97,8 +97,8 @@ class UserController extends Controller
     $user_model = new User();
     if ($_SESSION['user_admin']['quyen'] == 1) {
       $users = $user_model->getAllUser();
-      $this->content = $this->render("Mvc/backend/views/users/getAll.php", ['users' => $users]);
-      require_once 'Mvc/backend/views/layouts/main.php';
+      $this->content = $this->render("Mvc/Backend/views/users/getAll.php", ['users' => $users]);
+      require_once 'Mvc/Backend/views/layouts/main.php';
     } else {
       $this->UpdateUser();
     }
@@ -144,8 +144,8 @@ class UserController extends Controller
         }
       }
     }
-    $this->content = $this->render("Mvc/backend/views/users/UpdateUser.php");
-    require_once 'Mvc/backend/views/layouts/main.php';
+    $this->content = $this->render("Mvc/Backend/views/users/UpdateUser.php");
+    require_once 'Mvc/Backend/views/layouts/main.php';
 
   }
 
@@ -153,8 +153,8 @@ class UserController extends Controller
   {
     $user_model = new User();
     $admin = $user_model->getAllAdmin();
-    $this->content = $this->render("Mvc/backend/views/users/getAllAdmin.php", ['admin' => $admin]);
-    require_once 'Mvc/backend/views/layouts/main.php';
+    $this->content = $this->render("Mvc/Backend/views/users/getAllAdmin.php", ['admin' => $admin]);
+    require_once 'Mvc/Backend/views/layouts/main.php';
   }
 
 }

@@ -31,12 +31,12 @@ class ShoppingCartController extends Controller
       $carts = $order_model->listOrder($pageSize, $page);
     }
 
-    $this->content = $this->render("Mvc/backend/views/shoppingcart/index.php", [
+    $this->content = $this->render("Mvc/Backend/views/shoppingcart/index.php", [
         "carts" => $carts,
         "numPage" => $numPage,
         "page" => $page
     ]);
-    require_once "Mvc/backend/views/layouts/main.php";
+    require_once "Mvc/Backend/views/layouts/main.php";
   }
 
   public function search()
@@ -59,7 +59,7 @@ class ShoppingCartController extends Controller
         $numPage = ceil($countOrder / $pageSize);
         $carts = $order_model->orderSearchStaff($id,$search, $pageSize, $page);
         print_r($carts);
-        $this->content = $this->render("Mvc/backend/views/shoppingcart/search.php", [
+        $this->content = $this->render("Mvc/Backend/views/shoppingcart/search.php", [
             "carts" => $carts,
             "numPage" => $numPage,
             "page" => $page]);
@@ -71,7 +71,7 @@ class ShoppingCartController extends Controller
         $carts = $order_model->listOrderStaff($id,$pageSize, $page);
 
 
-        $this->content = $this->render("Mvc/backend/views/shoppingcart/search.php",
+        $this->content = $this->render("Mvc/Backend/views/shoppingcart/search.php",
             ["carts" => $carts,
                 "numPage" => $numPage,
                 "page" => $page]);
@@ -84,7 +84,7 @@ class ShoppingCartController extends Controller
         $countOrder = $order_model->countorderSearch($search);
         $numPage = ceil($countOrder / $pageSize);
         $carts = $order_model->orderSearch($search, $pageSize, $page);
-        $this->content = $this->render("Mvc/backend/views/shoppingcart/search.php", [
+        $this->content = $this->render("Mvc/Backend/views/shoppingcart/search.php", [
             "carts" => $carts,
             "numPage" => $numPage,
             "page" => $page]);
@@ -95,7 +95,7 @@ class ShoppingCartController extends Controller
         $carts = $order_model->listOrder($pageSize, $page);
 
 
-        $this->content = $this->render("Mvc/backend/views/shoppingcart/search.php",
+        $this->content = $this->render("Mvc/Backend/views/shoppingcart/search.php",
             ["carts" => $carts,
                 "numPage" => $numPage,
                 "page" => $page]);
@@ -115,12 +115,12 @@ class ShoppingCartController extends Controller
     $order_model = new ShoppingCart();
     $order = $order_model->order($id);
     $products = $order_model->listProduct($id);
-    $this->content = $this->render("Mvc/backend/views/shoppingcart/detail.php", [
+    $this->content = $this->render("Mvc/Backend/views/shoppingcart/detail.php", [
         "products" => $products,
         "order" => $order
 
     ]);
-    require_once 'Mvc/backend/views/layouts/main.php';
+    require_once 'Mvc/Backend/views/layouts/main.php';
   }
 
   public function send_payment()

@@ -1,7 +1,7 @@
 <?php
-require_once 'Mvc/frontend/models/Order.php';
-require_once 'Mvc/frontend/models/OrderDetail.php';
-require_once 'Mvc/frontend/models/Product.php';
+require_once 'Mvc/Frontend/models/Order.php';
+require_once 'Mvc/Frontend/models/OrderDetail.php';
+require_once 'Mvc/Frontend/models/Product.php';
 //nhúng các file liên quan đén thư viện phpmailler để gửi mail
 require_once 'nganhang/PHPMailer/src/PHPMailer.php';
 require_once 'nganhang/PHPMailer/src/SMTP.php';
@@ -102,12 +102,12 @@ class PaymentController extends Controller
                 }
             }
         }
-        $this->content=$this->render("Mvc/frontend/views/payments/index.php");
-        require_once 'Mvc/frontend/views/layouts/main.php';
+        $this->content=$this->render("Mvc/Frontend/views/payments/index.php");
+        require_once 'Mvc/Frontend/views/layouts/main.php';
     }
     public function sendMail($email)
     {
-        $this->content=$this->render('Mvc/frontend/views/payments/OderDetailMail.php');
+        $this->content=$this->render('Mvc/Frontend/views/payments/OderDetailMail.php');
         $mail = new PHPMailer(true);
         try {
             $mail->CharSet="UTF-8";
@@ -143,8 +143,8 @@ class PaymentController extends Controller
 //
     public function thank()
     {
-        $this->content=$this->render("Mvc/frontend/views/payments/thank.php");
-        require_once 'Mvc/frontend/views/layouts/main.php';
+        $this->content=$this->render("Mvc/Frontend/views/payments/thank.php");
+        require_once 'Mvc/Frontend/views/layouts/main.php';
     }
     public function online()
     {

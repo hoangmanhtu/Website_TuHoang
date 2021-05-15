@@ -24,17 +24,17 @@
       <div class="col-lg-3 col-md-12">
         <!--sidebar widget start-->
         <aside class="sidebar_widget">
-          <?php  require_once 'Mvc/frontend/controllers/CategoryController.php';
+          <?php  require_once 'Mvc/Frontend/controllers/CategoryController.php';
           $category_controller=new CategoryController();
           $category_controller->getCategoryCenter();
           ?>
 
-          <?php  require_once 'Mvc/frontend/controllers/ProducerController.php';
+          <?php  require_once 'Mvc/Frontend/controllers/ProducerController.php';
           $producer=new ProducerController();
           $producer->ProducerCenter();
           ?>
 <!--            -->
-            <?php  require_once 'Mvc/frontend/controllers/ProductController.php';
+            <?php  require_once 'Mvc/Frontend/controllers/ProductController.php';
             $product=new ProductController();
             $product->SellingproductCenter();
             ?>

@@ -176,7 +176,7 @@
                     <?php if(!empty($rating['user_avatar'])): ?>
                     <img style="width: 50px;height: 50px;" src="assets/uploads/users/<?php echo $rating['user_avatar']; ?>" alt="">
                     <?php else: ?>
-                      <img style="width: 50px;height: 50px;border: 1px solid #dadada" src="assets/frontend/images/user.jpg" alt="">
+                      <img style="width: 50px;height: 50px;border: 1px solid #dadada" src="Assets/Frontend/images/user.jpg" alt="">
                     <?php endif; ?>
                   </div>
                   <div class="comment_text">
@@ -188,7 +188,8 @@
                           <?php endfor; ?>
                         </ul>
                     </div>
-                      <p><strong><?php echo $rating["name"]; ?> </strong> - <span style="font-size: 13px;"><?php echo date('d/m/Y - H:i:s', strtotime($rating['created_at'])); ?></span> </p>
+                      <p style="margin-bottom: 0px; !important;"><strong><?php echo $rating["name"]; ?> </strong> <span style="margin-left: 5px;color: green;font-size: 12px;"><i class="fa fa-check-circle-o"></i>  Đã mua tại Showroom Tú Hoàng</span> </p>
+                      <p style="font-size: 13px;margin-bottom:5px !important; "><?php echo date('d/m/Y - H:i:s', strtotime($rating['created_at'])); ?></p>
                       <span><?php echo $rating['content']; ?></span>
                     </div>
                   </div>
